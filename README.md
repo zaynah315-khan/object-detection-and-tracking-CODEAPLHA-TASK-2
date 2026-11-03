@@ -1,4 +1,4 @@
-# Object Detection and Tracking – CodeAlpha Internship task 4
+# Object Detection and Tracking – CodeAlpha Internship task 2
 
 ## Project Overview
 This project uses YOLO11 and Deep SORT to detect and track objects in a video.
@@ -62,4 +62,4 @@ The processed video is saved at:
 The output displays detected objects with bounding boxes, class labels, and tracking IDs.
 
 ## Internship
-CodeAlpha Artificial Intelligence Internship – Task 4: Object Detection and Tracking.
+CodeAlpha Artificial Intelligence Internship – Task 2: Object Detection and Tracking.
