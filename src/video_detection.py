@@ -1,14 +1,12 @@
- import cv2
+import cv2
 from ultralytics import YOLO
 import os
 
 # Load YOLO model
 model = YOLO("yolo11n.pt")
 
-# Input video
+# Input and output paths
 video_path = "input_videos/test.mp4"
-
-# Output video path
 output_path = "output/detected_video.mp4"
 
 # Create output folder
@@ -47,7 +45,6 @@ frame_count = 0
 last_detected_frame = None
 
 try:
-    # Process video frames
     while True:
         ret, frame = cap.read()
 
@@ -64,13 +61,10 @@ try:
                 imgsz=416,
                 verbose=False
             )
-
             last_detected_frame = results[0].plot()
 
-        # Keep the latest detection boxes visible
         writer.write(last_detected_frame)
 
-        # Display progress
         if frame_count % 100 == 0:
             print(f"Processed {frame_count} frames")
 
